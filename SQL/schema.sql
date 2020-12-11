@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `smart-boss`.`Profile` (
   `Degree` VARCHAR(20),
   `Skills` TEXT,
   `ProjectExperience` TEXT,
+  `CreateDate` DATETIME,
   PRIMARY KEY (`ProfileId`))
 ENGINE = InnoDB;
 

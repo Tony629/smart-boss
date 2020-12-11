@@ -10,6 +10,8 @@ public class HomeController {
 
     @GetMapping("/version")
     public String version(){
+
+
         return "202012011640";
     }
 }
