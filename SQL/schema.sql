@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `smart-boss`.`Profile` (
   `Degree` VARCHAR(20),
   `Skills` TEXT,
   `ProjectExperience` TEXT,
-  `CreateDate` DATETIME,
+  `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ,
   PRIMARY KEY (`ProfileId`))
 ENGINE = InnoDB;
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `smart-boss`.`Intrview`(
     `Id` VARCHAR(36),
     `ProfileId` VARCHAR(36),
     `Comments` VARCHAR(300),
-    `CreateDate` DATETIME,
+    `CreateDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(`Id`))
 ENGINE = InnoDB;
 
@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `smart-boss`.`Attachment`(
     `Alias` VARCHAR(80),
     `Suffix` VARCHAR(10),
     `Content` TEXT,
+    `CreateDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(`Id`))
 ENGINE = InnoDB;
 
@@ -56,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `smart-boss`.`SysUser`(
     `Name` VARCHAR(36),
     `NickName` VARCHAR(36),
     `Password` VARCHAR(125),
-    `CreateDate` DATETIME,
+    `CreateDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(`Id`))
 ENGINE = InnoDB;
 
