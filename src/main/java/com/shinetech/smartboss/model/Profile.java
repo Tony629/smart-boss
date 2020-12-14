@@ -19,7 +19,7 @@ public class Profile {
     private String phone;
     private String wechat;
     private String degree;
-    private String skills;
-    private String projectExperience;
+    private String Skills;
+    private String ProjectExperience;
 
 }
