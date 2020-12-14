@@ -17,8 +17,8 @@ import java.io.Serializable;
 public class Profile implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "system_uuid")
-    @GenericGenerator(name = "system_uuid",strategy = "uuid")
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2",strategy = "org.hibernate.id.UUIDGenerator")
     @Column(length = 36)
     private String profileId;
 
